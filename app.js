@@ -39,7 +39,8 @@ app.post("/", (req, res) => {
   const mailOptions = {
     from: process.env.MY_EMAIL,
     to: "eder.marques@citi.org.br",
-    subject: "Sending Email using Node.js",
+    // to: "savio@simplesloja.com",
+    subject: "Simples - Feira do Empreendedor",
     text: req.body.data
   };
 

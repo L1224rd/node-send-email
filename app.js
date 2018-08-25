@@ -31,6 +31,8 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+let i = 0;
+
 app.get("/", (req, res) => {
   res.send("LISTENING ON PORT 3000");
 });
@@ -54,5 +56,8 @@ app.post("/", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log("READY");
+  setInterval(() => {
+    console.log(i);
+    i += 1;
+  }, 5000);
 });

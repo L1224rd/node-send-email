@@ -56,8 +56,5 @@ app.post("/", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  setInterval(() => {
-    console.log(i);
-    i += 1;
-  }, 5000);
+  console.log('READY');
 });
